@@ -1,15 +1,20 @@
+# import modules
 import csv
 import os
 
+# path for csv file
 csvpath = os.path.join(".", "Resources", "budget_data.csv")
 
+# path for text file
 outputFile = os.path.join("./Analysis/FinancialAnalysis.txt")
 
+# variables
 totalMonths = 0
 totalProfitLoss = 0
 monthlyChanges = []
 months =[]
 
+# read csv file
 with open(csvpath) as budget_data:
     csvreader = csv.reader(budget_data)
     header = next(csvreader)
